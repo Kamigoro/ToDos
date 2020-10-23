@@ -18,5 +18,11 @@ namespace ToDoList.ViewModels
             AddTodoCommand = new AddTodoCommand(this);
         }
 
+        public void AddTodo()
+        {
+            if (!string.IsNullOrWhiteSpace(TodoDescription))
+                Todos.Add(new Todo() { Description = TodoDescription });
+        }
+
     }
 }

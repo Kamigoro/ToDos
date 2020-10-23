@@ -26,8 +26,7 @@ namespace ToDoList.Commands
 
         public void Execute(object parameter)
         {
-            if (!string.IsNullOrWhiteSpace(_mainViewModel.TodoDescription))
-                _mainViewModel.Todos.Add(new Todo() { Description = _mainViewModel.TodoDescription });
+            _mainViewModel.AddTodo();
         }
     }
 }
